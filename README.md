@@ -36,32 +36,22 @@
 
 ## 安装
 
-### 方式一：git clone（推荐，可自动更新）
+一行搞定，或者让你的 AI 帮你跑：
 
-```bash
-# 克隆整个仓库到本地
-git clone https://github.com/Yelican/HalloSkills.git ~/.claude/skills-repo/HalloSkills
-
-# 将需要的 skill 目录链接/复制到 Claude Code skills 目录
-# Windows (PowerShell):
-New-Item -ItemType Junction -Path "$env:USERPROFILE\.claude\skills\hallotools-1.0.0" -Target (Get-Item ".\hallotools").FullName
-New-Item -ItemType Junction -Path "$env:USERPROFILE\.claude\skills\hallochatgold-1.0.0" -Target (Get-Item ".\hallochatgold").FullName
-
-# macOS / Linux:
-cp -r ~/.claude/skills-repo/HalloSkills/hallotools ~/.claude/skills/hallotools-1.0.0
-cp -r ~/.claude/skills-repo/HalloSkills/hallochatgold ~/.claude/skills/hallochatgold-1.0.0
+**Windows (PowerShell):**
+```powershell
+git clone https://github.com/Yelican/HalloSkills.git $env:TEMP\HalloSkills; Copy-Item "$env:TEMP\HalloSkills\hallotools" "$env:USERPROFILE\.claude\skills\hallotools-1.0.0" -Recurse; Copy-Item "$env:TEMP\HalloSkills\hallochatgold" "$env:USERPROFILE\.claude\skills\hallochatgold-1.0.0" -Recurse
 ```
 
-更新：
+**macOS / Linux:**
 ```bash
-cd ~/.claude/skills-repo/HalloSkills && git pull
-# 所有已复制的 skill 目录需手动同步
+git clone https://github.com/Yelican/HalloSkills.git /tmp/HalloSkills && cp -r /tmp/HalloSkills/hallotools ~/.claude/skills/hallotools-1.0.0 && cp -r /tmp/HalloSkills/hallochatgold ~/.claude/skills/hallochatgold-1.0.0
 ```
 
-### 方式二：手动下载单个 Skill
+**也可以直接对你的 AI 说：**
+> 「去 github.com/Yelican/HalloSkills 把 hallochatgold 装到我的 skills 目录」
 
-1. 点击仓库页面的 Code → Download ZIP
-2. 解压需要的 `hallotools/` 或 `hallochatgold/` 文件夹到 `~/.claude/skills/<name>-<version>/`
+更新：重新跑上面的命令或者 `git pull` 后复制。
 
 ---
 
