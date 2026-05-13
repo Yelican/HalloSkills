@@ -73,15 +73,6 @@ Skill 是 Claude Code 的扩展机制——一个 SKILL.md 文件定义触发条
 
 ---
 
-## 贡献
-
-欢迎 PR 和 Issue。
-- 有新的 Skill 想法 → 开 Issue 讨论
-- 想把自己的 Skill 加进来 → Fork + PR
-- 发现 HalloTools 漏了好工具 → 编辑 `hallotools/references/classic-tools.md` 提 PR
-
----
-
 ## License
 
 MIT
