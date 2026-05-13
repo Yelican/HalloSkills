@@ -19,17 +19,18 @@
 
 ---
 
-### 💎 HalloChatGold — 对话淘金术（v1.1）
+### 💎 HalloChatGold — 对话淘金术（v1.2）
 
 基于 6 个被验证思维模型（DIKW 金字塔、Kirkpatrick 五级评估、Peirce 洞察金字塔、Pearl 反事实因果、RACI 矩阵、复利效应评估）有机整合的 7 步对话价值提炼管道。**不只是记笔记，是把讨论价值榨干。**
 
 **方法论：** 收集 → 过滤 → 评估 → 提炼 → 验证 → 落地 → 预测
 
-**v1.1 亮点：**
-- 每步含 100 字 AI 深度分析，数据之外有人话解读
-- 洞察上限放宽至 7 条，附金句收尾
-- 触发条件大幅放宽——「总结/提炼/复盘/整理/结构化」任一关键词即触发
-- RACI 全中文展示 + 复利评级留言
+**v1.2 亮点：**
+- 评分标准全面重构——从 0 起评、证据锚定、扣分项独立检查、审计触发，终结高分膨胀
+- 每步新增质量检查清单（DIKW 分类红线、洞察肥皂剧测试、反事实三角验证、RACI 周一早测试）
+- 复利评估从 1-10 改为 0-2 分，与 Kirkpatrick 全篇统一
+- 知识半衰期来源修正为 Samuel Arbesman (2012)
+- 导出排版规范落地（LaTeX/Chrome/Python 三档可选）
 
 **触发方式：**
 - 「帮我总结这次讨论」「提炼一下刚才聊的」→ 完整 7 步管道
@@ -46,12 +47,12 @@
 
 **Windows (PowerShell):**
 ```powershell
-git clone https://github.com/Yelican/HalloSkills.git $env:TEMP\HalloSkills; Copy-Item "$env:TEMP\HalloSkills\hallotools" "$env:USERPROFILE\.claude\skills\hallotools-1.0.0" -Recurse; Copy-Item "$env:TEMP\HalloSkills\hallochatgold" "$env:USERPROFILE\.claude\skills\hallochatgold-1.1" -Recurse
+git clone https://github.com/Yelican/HalloSkills.git $env:TEMP\HalloSkills; Copy-Item "$env:TEMP\HalloSkills\hallotools" "$env:USERPROFILE\.claude\skills\hallotools-1.0.0" -Recurse; Copy-Item "$env:TEMP\HalloSkills\hallochatgold" "$env:USERPROFILE\.claude\skills\hallochatgold-1.2" -Recurse
 ```
 
 **macOS / Linux:**
 ```bash
-git clone https://github.com/Yelican/HalloSkills.git /tmp/HalloSkills && cp -r /tmp/HalloSkills/hallotools ~/.claude/skills/hallotools-1.0.0 && cp -r /tmp/HalloSkills/hallochatgold ~/.claude/skills/hallochatgold-1.1
+git clone https://github.com/Yelican/HalloSkills.git /tmp/HalloSkills && cp -r /tmp/HalloSkills/hallotools ~/.claude/skills/hallotools-1.0.0 && cp -r /tmp/HalloSkills/hallochatgold ~/.claude/skills/hallochatgold-1.2
 ```
 
 **也可以直接对你的 AI 说：**
