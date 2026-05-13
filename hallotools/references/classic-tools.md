@@ -53,7 +53,7 @@
 
 | 工具 | 一句话 | 网站 | 开源 |
 |---|---|---|---|
-| **Weflow** | 微信聊天记录管理/分析/复盘 | github.com/nicepkg/weflow | github.com/nicepkg/weflow |
+| **WeFlow** | 微信聊天记录管理/分析/导出 | weflow.top | github.com/hicccc77/WeFlow |
 | **WeChatMsg** | 微信聊天记录导出/分析工具 | — | github.com/LC044/WeChatMsg |
 | **Franz** | 多平台即时通讯聚合客户端 | meetfranz.com | ❌ |
 
