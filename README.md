@@ -1,6 +1,6 @@
 # HalloSkills
 
-Claude Code 的开源 Skills 集合。让 AI 成为你最好的工具发现伙伴。
+基于 Claude Code 的自建自用 Skills 集合。让 AI 成为你最好的工具发现伙伴。
 
 ## 已有的 Skills
 
