@@ -1,4 +1,4 @@
-# HellGold Chat 2.0 · 黄金对话管理中心
+# HalloGoldChat · 黄金对话管理中心
 
 **四合一 AI 对话分析看板** — 把每一次 Claude Code 对话变成可视化的认知报告。
 
@@ -43,9 +43,9 @@ python hellgold-chat-2.0.py
 | 工具 | 关系 |
 |------|------|
 | **CC会话管理中心** | 同源数据（都读 `~/.claude/projects/`），但 HellGold Chat 增加了分析层 |
-| **HalloChatGold** | HalloChatGold 是"手工单次复盘"，HellGold Chat 是"批量自动分析 + 可视化" |
+| **HalloChatGold** | HalloChatGold 是"手工单次复盘"，HalloGoldChat 是"批量自动分析 + 可视化" |
 
-**HellGold Chat 2.0 完全独立运行，不需要安装 CC会话管理中心或任何其他工具。**
+**HalloGoldChat 完全独立运行，不需要安装 CC会话管理中心或任何其他工具。**
 
 ## 界面说明
 
@@ -101,7 +101,7 @@ python hellgold-chat-2.0.py
         "hooks": [
           {
             "type": "command",
-            "command": "python \"$HOME/Desktop/HellGold Chat 2.0/hellgold-chat-2.0.py\""
+            "command": "python ~/.claude/shared-scripts/hellgold-chat-2.0.py"
           }
         ]
       }
@@ -110,13 +110,11 @@ python hellgold-chat-2.0.py
 }
 ```
 
-路径中的空格需要用 `\"$HOME/...\"` 包裹。
-
 ### 方法二：干净（推荐，安装到 shared-scripts）
 
 ```bash
 # 1. 把脚本复制到 shared-scripts（路径无空格，更稳定）
-cp "Desktop/HellGold Chat 2.0/hellgold-chat-2.0.py" ~/.claude/shared-scripts/
+cp hallogoldchat/hellgold-chat-2.0.py ~/.claude/shared-scripts/
 
 # 2. 在 settings.json 中添加 hook
 ```
@@ -140,7 +138,7 @@ settings.json 配置：
 }
 ```
 
-### 同时使用 CC会话管理中心 + HellGold Chat
+### 同时使用 CC会话管理中心 + HalloGoldChat
 
 如果你两个工具都要自动更新，在同一个 `SessionEnd` 钩子中添加两条命令：
 
@@ -156,7 +154,7 @@ settings.json 配置：
           },
           {
             "type": "command",
-            "command": "python \"$HOME/Desktop/HellGold Chat 2.0/hellgold-chat-2.0.py\""
+            "command": "python ~/.claude/shared-scripts/hellgold-chat-2.0.py"
           }
         ]
       }

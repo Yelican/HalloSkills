@@ -59,7 +59,7 @@
 
 ---
 
-### 💬 HellGold Chat 2.0 — 黄金对话管理中心
+### 💬 HalloGoldChat — 黄金对话管理中心
 
 **四合一 AI 对话分析看板。** 扫描你所有 Claude Code 对话，生成一个暗色科技风 HTML 看板，四个维度审视你的 AI 交互质量。
 
@@ -72,7 +72,7 @@
 
 **特点：** 零外部依赖，纯前端，离线即开即用。无需 API Key，数据不出本地。
 
-[查看文档 →](./HellGold%20Chat%202.0/README.md) | [Skill 定义 →](./HellGold%20Chat%202.0/SKILL.md)
+[查看文档 →](./hallogoldchat/README.md) | [Skill 定义 →](./hallogoldchat/SKILL.md)
 
 ---
 

@@ -1,11 +1,11 @@
 ---
-name: hellgold-chat-2.0-deploy
-description: 完整部署 HellGold Chat 2.0 到新设备的 AI 可读指令
+name: hallogoldchat-deploy
+description: 完整部署 HalloGoldChat 到新设备的 AI 可读指令
 ---
 
-# HellGold Chat 2.0 · AI 部署指令
+# HalloGoldChat · AI 部署指令
 
-你是 Claude Code 实例。请执行以下步骤在本机完整部署 **HellGold Chat 2.0**——一个零外部依赖的 AI 对话分析看板。
+你是 Claude Code 实例。请执行以下步骤在本机完整部署 **HalloGoldChat**——一个零外部依赖的 AI 对话分析看板。
 
 ## 任务目标
 
@@ -36,7 +36,7 @@ ls ~/.claude/projects/*.jsonl 2>/dev/null
 用户提供的打包目录位于桌面：
 
 ```bash
-ls ~/Desktop/HellGold\ Chat\ 2.0/
+ls ~/Desktop/HalloSkills/hallogoldchat/
 ```
 
 应包含以下文件：
@@ -52,7 +52,7 @@ ls ~/Desktop/HellGold\ Chat\ 2.0/
 ## 第三步：运行主脚本
 
 ```bash
-cd ~/Desktop/HellGold\ Chat\ 2.0/
+cd ~/Desktop/HalloSkills/hallogoldchat/
 python hellgold-chat-2.0.py
 ```
 
@@ -98,7 +98,7 @@ grep -c "tab-panel\|ALL_SESSIONS\|genAnalysis" ~/Desktop/HellGold\ Chat\ 2.0.htm
 
 1. 复制脚本到共享目录：
 ```bash
-cp ~/Desktop/HellGold\ Chat\ 2.0/hellgold-chat-2.0.py ~/.claude/shared-scripts/
+cp ~/Desktop/HalloSkills/hallogoldchat/hellgold-chat-2.0.py ~/.claude/shared-scripts/
 ```
 
 2. 编辑 `~/.claude/settings.json`，在 `"hooks"` 节点添加：
