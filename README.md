@@ -1,10 +1,28 @@
 # HalloSkills
 
-基于 Claude Code 的自建自用 Skills 集合。覆盖工具发现、对话提炼等场景。
+基于 Claude Code 的自建自用 Skills 集合。覆盖备份、工具发现、对话提炼、对话分析等场景。
 
 ## 已有的 Skills
 
-### 🛠 HalloTools — 工具雷达
+### 🗄 HalloCC — 全量备份工具（v1.0）
+
+一键备份 Claude Code 全部配置、对话历史、Skills、环境信息，敏感信息自动脱敏，生成 HTML 看板。
+
+**核心能力：**
+- 备份 `~/.claude/` 全部核心数据
+- 对话 JSONL + Skills + MCP 配置全覆盖
+- API Key / token 等敏感信息自动扫描替换
+- 可选生成 HTML 可视化看板
+
+**触发方式：**
+- `/hallocc` → 备份到桌面
+- `/hallocc <路径>` → 备份到指定目录
+
+[查看完整文档 →](./hallocc-1.0.0/SKILL.md)
+
+---
+
+### 🛠 HalloTools — 工具雷达（v1.0）
 
 每天自动从多个信息源挖掘新工具和开源项目，内置经典好工具推荐库。
 
@@ -41,18 +59,35 @@
 
 ---
 
+### 💬 HellGold Chat 2.0 — 黄金对话管理中心
+
+**四合一 AI 对话分析看板。** 扫描你所有 Claude Code 对话，生成一个暗色科技风 HTML 看板，四个维度审视你的 AI 交互质量。
+
+| 模块 | 解决什么问题 |
+|------|------------|
+| **会话浏览** | 气泡式对话回放，搜索筛选，项目分组 |
+| **价值看板** | Kirkpatrick 五级评估 + DIKW 分层 + 洞察提取 + RACI 行动 |
+| **提示词审计** | 10 维评分，逐条分析，共性弱项 + 改写示例 |
+| **批判镜** | 盲点检测，认知偏误分析，逻辑断裂，元认知挑战 |
+
+**特点：** 零外部依赖，纯前端，离线即开即用。无需 API Key，数据不出本地。
+
+[查看文档 →](./HellGold%20Chat%202.0/README.md) | [Skill 定义 →](./HellGold%20Chat%202.0/SKILL.md)
+
+---
+
 ## 安装
 
 一行搞定，或者让你的 AI 帮你跑：
 
 **Windows (PowerShell):**
 ```powershell
-git clone https://github.com/Yelican/HalloSkills.git $env:TEMP\HalloSkills; Copy-Item "$env:TEMP\HalloSkills\hallotools" "$env:USERPROFILE\.claude\skills\hallotools-1.0.0" -Recurse; Copy-Item "$env:TEMP\HalloSkills\hallochatgold" "$env:USERPROFILE\.claude\skills\hallochatgold-1.2" -Recurse
+git clone https://github.com/Yelican/HalloSkills.git $env:TEMP\HalloSkills; Copy-Item "$env:TEMP\HalloSkills\hallotools" "$env:USERPROFILE\.claude\skills\hallotools-1.0.0" -Recurse; Copy-Item "$env:TEMP\HalloSkills\hallochatgold" "$env:USERPROFILE\.claude\skills\hallochatgold-1.2" -Recurse; Copy-Item "$env:TEMP\HalloSkills\hallocc-1.0.0" "$env:USERPROFILE\.claude\skills\hallocc-1.0.0" -Recurse
 ```
 
 **macOS / Linux:**
 ```bash
-git clone https://github.com/Yelican/HalloSkills.git /tmp/HalloSkills && cp -r /tmp/HalloSkills/hallotools ~/.claude/skills/hallotools-1.0.0 && cp -r /tmp/HalloSkills/hallochatgold ~/.claude/skills/hallochatgold-1.2
+git clone https://github.com/Yelican/HalloSkills.git /tmp/HalloSkills && cp -r /tmp/HalloSkills/hallotools ~/.claude/skills/hallotools-1.0.0 && cp -r /tmp/HalloSkills/hallochatgold ~/.claude/skills/hallochatgold-1.2 && cp -r /tmp/HalloSkills/hallocc-1.0.0 ~/.claude/skills/hallocc-1.0.0
 ```
 
 **也可以直接对你的 AI 说：**
