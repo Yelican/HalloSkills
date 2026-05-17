@@ -567,14 +567,16 @@ AI 自动检测当前环境可用的工具链，选择最优方案执行。
     "results": { "score": "0-2", "evidence": "..." },
     "roi": { "score": "0-2", "evidence": "..." },
     "totalScore": "五级评分加总，整数 0-10",
-    "rating": "高价值讨论 / 中等价值讨论 / 低价值讨论 / 殿堂级对话"
+    "rating": "高价值讨论 / 中等价值讨论 / 低价值讨论 / 殿堂级对话",
+    "summary": "约100字的 💬 解读段落：这次讨论最突出的维度、短板、整体判断、下次改进建议"
   },
   "dikw": {
     "L1_facts_pct": "0-100 的整数",
     "L2_methods_pct": "0-100 的整数",
     "L3_transfers_pct": "0-100 的整数",
     "L4_principles_pct": "0-100 的整数",
-    "conclusion": "如「L3+L4 合计占比 X%，属于深度型讨论」"
+    "conclusion": "如「L3+L4 合计占比 X%，属于深度型讨论」",
+    "summary": "约100字的 💬 解读段落：含金量集中在哪个层级、最值得消化的部分、速查即可的部分"
   },
   "insights": [
     {
@@ -590,17 +592,20 @@ AI 自动检测当前环境可用的工具链，选择最优方案执行。
     "timeSaved": "如「3天」",
     "pitfallsAvoided": "如「2个坑」",
     "valueEstimate": "如「约300元」",
-    "irreplaceability": "高 / 中 / 低"
+    "irreplaceability": "高 / 中 / 低",
+    "summary": "约100字的 💬 解读段落：实际价值体现在省时间还是避坑、最值得注意的亮点、在这次讨论的定位"
   },
   "raci": [
     { "role": "R", "actor": "负责人", "action": "具体行动", "deadline": "YYYY-MM-DD" },
     { "role": "A", "actor": "负责人", "action": "结果标准", "deadline": "YYYY-MM-DD" }
   ],
+  "raciSummary": "约100字的 💬 解读段落：如果只做一件事是什么、为什么、做成了会带来什么改变",
   "compound": {
     "leverage": { "score": "0-2", "description": "描述" },
     "halflife": { "score": "0-2", "description": "描述" },
     "derivative": { "score": "0-2", "description": "描述" },
-    "rating": "S / A / B / C"
+    "rating": "S / A / B / C",
+    "summary": "约100字的 💬 解读段落：评级解读、建议（反复看还是用完就扔）、如何让复利最大化"
   },
   "goldenQuote": "金句原文（没有则填空字符串）",
   "fullMarkdown": "本次分析的完整 Markdown 报告原文，包括所有标题、表格、引用"

@@ -763,6 +763,7 @@ function renderDetail(r) {
   html += '</div>';
   html += `<div class="kp-total ${scoreClass(ks.totalScore)}">${ks.totalScore}/10</div>`;
   html += `<div class="kp-rating">${escHtml(ks.rating||'')}</div>`;
+  if (ks.summary) html += `<div class="quote-block">${escHtml(ks.summary)}</div>`;
   html += '</div>';
 
   // DIKW
@@ -783,6 +784,7 @@ function renderDetail(r) {
     </div>`;
   });
   if (d.conclusion) html += `<div class="dikw-conclusion">${escHtml(d.conclusion)}</div>`;
+  if (d.summary) html += `<div class="quote-block">${escHtml(d.summary)}</div>`;
   html += '</div>';
 
   // Insights
@@ -820,7 +822,9 @@ function renderDetail(r) {
         <td>${escHtml(item.deadline||'')}</td>
       </tr>`;
     });
-    html += '</tbody></table></div>';
+    html += '</tbody></table>';
+    if (r.raciSummary) html += `<div class="quote-block">${escHtml(r.raciSummary)}</div>`;
+    html += '</div>';
   }
 
   // Counterfactual
@@ -830,7 +834,9 @@ function renderDetail(r) {
   if (cf.timeSaved) html += `<div class="cf-item"><div class="cfl">节省时间</div><div class="cfv">${escHtml(cf.timeSaved)}</div></div>`;
   if (cf.pitfallsAvoided) html += `<div class="cf-item"><div class="cfl">避免的坑</div><div class="cfv">${escHtml(cf.pitfallsAvoided)}</div></div>`;
   if (cf.valueEstimate) html += `<div class="cf-item"><div class="cfl">价值估算</div><div class="cfv">${escHtml(cf.valueEstimate)}</div></div>`;
-  html += '</div></div>';
+  html += '</div>';
+  if (cf.summary) html += `<div class="quote-block">${escHtml(cf.summary)}</div>`;
+  html += '</div>';
 
   // Compound
   const cp = r.compound || {};
@@ -853,6 +859,7 @@ function renderDetail(r) {
     const rc = cp.rating === 'S' ? '#a78bfa' : cp.rating === 'A' ? 'var(--accent)' : cp.rating === 'B' ? 'var(--yellow)' : 'var(--red)';
     html += `<div class="compound-rating" style="background:${rc}22;color:${rc};border:1px solid ${rc}">复利评级：${cp.rating}</div>`;
   }
+  if (cp.summary) html += `<div class="quote-block">${escHtml(cp.summary)}</div>`;
   html += '</div>';
 
   // Full report
