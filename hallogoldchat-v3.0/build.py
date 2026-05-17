@@ -9,7 +9,7 @@ HalloChatGold Board Builder v2.0
   python build.py --serve                  # 启动本地预览服务器
   python build.py <输出路径>               # 指定输出路径
 
-数据源：hallochatgold skill 自动存档的 JSON 报告
+数据源：hallogoldchat skill 自动存档的 JSON 报告
 输出：自包含 HTML 文件，双击即可打开
 """
 
@@ -506,7 +506,7 @@ body {
         <h2>工作流</h2>
         <ul>
           <li>和 Claude 聊完 → 说「凡哥来个复盘」</li>
-          <li>hallochatgold skill 执行完整 7 步管道 → 输出报告 + 自动存档</li>
+          <li>hallogoldchat skill 执行完整 7 步管道 → 输出报告 + 自动存档</li>
           <li>跑 <code>python build.py</code> 更新看板</li>
           <li>双击桌面 HTML 文件，所有历史分析一目了然</li>
         </ul>
@@ -555,7 +555,7 @@ document.querySelectorAll('.nav-btn').forEach(btn => {
 function renderOverview() {
   const el = document.getElementById('tab-overview');
   if (DATA.length === 0) {
-    el.innerHTML = '<div class="no-data"><h2>暂无报告</h2><p>运行 hallochatgold skill 生成第一份报告后，再跑 build.py 更新看板。</p></div>';
+    el.innerHTML = '<div class="no-data"><h2>暂无报告</h2><p>运行 hallogoldchat skill 生成第一份报告后，再跑 build.py 更新看板。</p></div>';
     return;
   }
   const a = AGG;
