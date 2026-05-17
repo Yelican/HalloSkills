@@ -129,13 +129,13 @@ def build_all(output_path=None):
         output_path = DEFAULT_OUTPUT
     reports = load_reports()
     aggregate = compute_aggregate(reports)
-    print(f"[+] 读取到 {len(reports)} 份报告")
     html = build_html(reports, aggregate)
     os.makedirs(os.path.dirname(output_path) or '.', exist_ok=True)
     with open(output_path, 'w', encoding='utf-8') as f:
         f.write(html)
     size_kb = os.path.getsize(output_path) / 1024
-    print(f"[+] 看板已生成: {output_path} ({size_kb:.0f} KB)")
+    now = datetime.datetime.now().strftime('%H:%M:%S')
+    print(f"[HalloGoldChat] {now} 看板已更新: {os.path.basename(output_path)} ({size_kb:.0f} KB, {len(reports)} 份报告)")
     return output_path
 
 
